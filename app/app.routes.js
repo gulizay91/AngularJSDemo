@@ -7,4 +7,9 @@ angular.module('routerApp',['ui.router'])
       templateUrl: 'app/components/swapi/swapi.html',
       controller: 'swapiCtrl'
     })
+    .state('user', {
+      url: '/user',
+      templateUrl: 'app/components/user/user.html',
+      controller: 'userCtrl'
+    })
  })
