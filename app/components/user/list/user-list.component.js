@@ -5,6 +5,7 @@ function getData() {
     {id: "1", name:"guliz"}
     ,{id: "2", name:"admin"}];
 
+  //console.log(responseData)
   return responseData;
 }
 
@@ -18,26 +19,15 @@ async function _fetchData() {
 angular.module('userApp')
   .component('userList', {
     templateUrl: 'app/components/user/list/user-list.template.html',
-    bindings: { api : "=" },
     controller: function userListCtrl($scope, $firebaseArray) {
-      
-      this.$onInit = function() {
-        this.datas = [];
-        this.api = {};
-        this.api.getList = fetchDatas;
-      };
-      $scope.$on("getList",function(){
-        console.log("click child fetchData")
+      this.result = "aa";
+      $scope.$on("getList", async function(){
+        console.log("run child fetchData")
         let _datas = getData();
-        this.datas = _datas;
+        this.datas = await _datas;
+        //this.result =  angular.fromJson(_datas);
+        this.result = "_datas";
+        console.log(this.result)
       });
-
-      function fetchDatas() {
-        console.log("click child fetchData")
-        let _datas = getData();
-        this.datas = _datas;
-        //this.datas = _fetchData();
-        //window.location.reload();
-      }
     }
   })

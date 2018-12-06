@@ -10,6 +10,7 @@ angular.module('routerApp',['ui.router'])
     .state('user', {
       url: '/user',
       templateUrl: 'app/components/user/user.html',
-      controller: 'userCtrl'
+      controller: 'userCtrl',
+      controllerAs: 'parentCtrl'
     })
  })
