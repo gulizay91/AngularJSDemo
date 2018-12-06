@@ -13,4 +13,9 @@ angular.module('routerApp',['ui.router'])
       controller: 'userCtrl',
       controllerAs: 'parentCtrl'
     })
+    .state('profile', {
+      url: '/profile',
+      templateUrl: 'app/components/profile/profile.html',
+      controller: 'profileCtrl'
+    })
  })

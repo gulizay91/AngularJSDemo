@@ -2,8 +2,8 @@ function getData() {
   let responseData = [];
   //responseData = fetch('/article/promise-chaining/user.json');
   responseData = [
-    {id: "1", name:"guliz"}
-    ,{id: "2", name:"admin"}];
+    {id: "1", username: 'sadmin', firstname:"guliz", lastname: 'ay'}
+    ,{id: "2", username: 'admin', firstname:"admin", lastname: 'admin'}];
 
   //console.log(responseData)
   return responseData;
