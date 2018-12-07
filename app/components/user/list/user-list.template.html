@@ -1,8 +1,8 @@
-<div> result:  {{ $ctrl.result }} </div>
 <div>
   <table>
     <thead>
       <tr>
+        <td> Id </td>
         <td> Username </td>
         <td> FirstName </td>
         <td> LastName </td>
@@ -10,6 +10,7 @@
     </thead>
     <tbody>
       <tr ng-repeat="data in $ctrl.datas">
+        <td> {{ data.id }} </td>
         <td> {{ data.username }} </td>
         <td> {{ data.firstname }} </td>
         <td> {{ data.lastname }} </td>
